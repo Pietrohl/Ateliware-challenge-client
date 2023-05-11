@@ -1,0 +1,145 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Ateliware mock data",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8080/"
+        }
+    ],
+    "paths": {
+        "/routes": {
+            "get": {
+                "description": "List the 10 last routes calulated by the system",
+                "responses": {
+                    "200": {
+                        "description": "Sucessful",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/route"
+                                    },
+                                    "uniqueItems": true,
+                                    "minItems": 10,
+                                    "maxItems": 10
+                                }
+                            }
+                        },
+                        "headers": {}
+                    }
+                }
+            },
+            "post": {
+                "description": "Create New Route",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "initialCoordinate": {
+                                        "$ref": "#/components/schemas/coordinate"
+                                    },
+                                    "packageCoordinate": {
+                                        "$ref": "#/components/schemas/coordinate"
+                                    },
+                                    "deliveryCoordinate": {
+                                        "$ref": "#/components/schemas/coordinate"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Sucessful",
+                        "content": {
+                            "application/json": {
+                                "schema": null
+                            }
+                        },
+                        "headers": {}
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "coordinate": {
+                "type": "object",
+                "properties": {
+                    "xAxis": {
+                        "type": "integer",
+                        "format": "int32",
+                        "example": 5
+                    },
+                    "yAxis": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 1,
+                        "example": "A"
+                    }
+                }
+            },
+            "route": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int64",
+                        "example": 10
+                    },
+                    "initialCoordinate": {
+                        "$ref": "#/components/schemas/coordinate"
+                    },
+                    "packageCoordinate": {
+                        "$ref": "#/components/schemas/coordinate"
+                    },
+                    "deliveryCoordinate": {
+                        "$ref": "#/components/schemas/coordinate"
+                    },
+                    "time": {
+                        "type": "integer",
+                        "format": "double",
+                        "example": 1342.212
+                    },
+                    "path": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/coordinate"
+                        }
+                    }
+                }
+            }
+        },
+        "requestBodies": {
+            "newRoute": {
+                "description": "Create new Route",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "initialCoordinate": {
+                                    "$ref": "#/components/schemas/coordinate"
+                                },
+                                "packageCoordinate": {
+                                    "$ref": "#/components/schemas/coordinate"
+                                },
+                                "deliveryCoordinate": {
+                                    "$ref": "#/components/schemas/coordinate"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

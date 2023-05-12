@@ -57,7 +57,20 @@
                 },
                 "responses": {
                     "201": {
-                        "description": "Sucessful"
+                        "description": "Sucessful",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "newRoute": {
+                                            "$ref": "#/components/schemas/route"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "headers": {}
                     }
                 }
             }

@@ -1,12 +1,14 @@
 // Creating a service request method similar to axios.create
 // choose this approach for smaller footprint
+const defaultBaseURL = new URL(import.meta.env.VITE_API_TARGET);
+const defaultRequestInit: Omit<RequestInit, "signal"> = {};
 
-export function createServiceRequest<T>(
-  baseURL?: URL,
-  serviceReqInit?: Omit<RequestInit, "signal">,
+export function createServiceRequest(
+  baseURL: URL = defaultBaseURL,
+  serviceReqInit: Omit<RequestInit, "signal"> = defaultRequestInit,
   timeout = 8000
 ) {
-  return async function (endpoint: string, init: RequestInit): Promise<T> {
+  return async function <T>(endpoint: string, init: RequestInit): Promise<T> {
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), timeout);
 
@@ -16,6 +18,8 @@ export function createServiceRequest<T>(
       signal: controller.signal,
     });
     clearTimeout(timeoutId);
+
+    console.log("Response", response);
 
     return response.ok ? response.json() : Promise.reject(response);
   };

@@ -1,37 +1,29 @@
 import Button from "@mui/material/Button";
-import { ChangeEvent, FormEvent, useState } from "react";
+import { ChangeEvent, FormEvent } from "react";
 import CoordinateInput from "./CoordinateInput";
 
 const Form = () => {
-  const [message, setMessage] = useState("");
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {};
 
-  const handleSubmit = (event: FormEvent) => {};
-
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setMessage(event.target.value);
-  };
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {};
 
   return (
     <>
-      <p>{message}</p>
       <form onSubmit={handleSubmit}>
         <CoordinateInput
           name="Initial Coordinate"
           type="text"
           onChange={handleChange}
-          value={message}
         />
         <CoordinateInput
           name="Package Coordinate"
           type="text"
           onChange={handleChange}
-          value={message}
         />
         <CoordinateInput
           name="Delivery Coordinate"
           type="text"
           onChange={handleChange}
-          value={message}
         />
         <br />
         <Button variant="contained" type="submit">

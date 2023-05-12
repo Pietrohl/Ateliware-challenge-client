@@ -57,13 +57,7 @@
                 },
                 "responses": {
                     "201": {
-                        "description": "Sucessful",
-                        "content": {
-                            "application/json": {
-                                "schema": null
-                            }
-                        },
-                        "headers": {}
+                        "description": "Sucessful"
                     }
                 }
             }

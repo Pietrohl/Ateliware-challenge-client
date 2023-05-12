@@ -11,5 +11,4 @@ export type NewRouteDTO = Omit<Route, "path">;
 
 export type NewRouteResponse = {
   newRoute: Route;
-  pastRoutes: Route[];
 };

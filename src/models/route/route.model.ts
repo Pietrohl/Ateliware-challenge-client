@@ -1,6 +1,7 @@
 import { Coordinate } from "../coordinate/coordinate";
 
 export type Route = {
+  id: number;
   initialCoordinate: Coordinate;
   packageCoordinate: Coordinate;
   deliveryCoordinate: Coordinate;

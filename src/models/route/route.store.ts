@@ -14,6 +14,8 @@ export const useRoutesStore = create<RoutesState>((set) => ({
   routes: [],
   calculateNewRoute: async (coordinates: NewRouteDTO) => {
     const { newRoute } = await newRouteRequest(coordinates);
+    
+
     set((state) => ({ routes: [...state.routes, newRoute] }));
   },
   fetchRoutes: async () => {

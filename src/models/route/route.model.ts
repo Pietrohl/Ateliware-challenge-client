@@ -1,4 +1,4 @@
-import { Coordinate } from "../coordinate/coordinate";
+import { Coordinate } from "../coordinate/coordinate.model";
 
 export type Route = {
   id: number;
@@ -6,9 +6,10 @@ export type Route = {
   packageCoordinate: Coordinate;
   deliveryCoordinate: Coordinate;
   path: Coordinate[];
+  time: number;
 };
 
-export type NewRouteDTO = Omit<Route, "path">;
+export type NewRouteDTO = Omit<Route, "path" | "id" | "time">;
 
 export type NewRouteResponse = {
   newRoute: Route;

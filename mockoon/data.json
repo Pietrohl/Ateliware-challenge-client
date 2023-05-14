@@ -1,152 +1,123 @@
 {
-    "openapi": "3.0.0",
-    "info": {
-        "title": "Ateliware mock data",
-        "version": "1.0.0"
-    },
-    "servers": [
-        {
-            "url": "http://localhost:8080/"
-        }
+    "uuid": "256c90fd-e1c6-42eb-844f-ad44367b3820",
+    "lastMigration": 27,
+    "name": "Ateliware mock data",
+    "endpointPrefix": "",
+    "latency": 0,
+    "port": 3000,
+    "hostname": "",
+    "folders": [],
+    "routes": [
+      {
+        "uuid": "b7d7d954-41e6-48fb-9ec3-b47b8741d28c",
+        "type": "http",
+        "documentation": "List the 10 last routes calulated by the system",
+        "method": "get",
+        "endpoint": "routes",
+        "responses": [
+          {
+            "uuid": "a279154e-52d2-4b9f-b689-087d24e8789b",
+            "body": "[\n{\n    \"id\": {{faker 'datatype.number' min=0 max=250}},\n    \"initialCoordinate\": {\n      \"yAxis\": 1,\n      \"xAxis\": \"A\"\n    },\n    \"packageCoordinate\": {\n      \"yAxis\": 2,\n      \"xAxis\": \"A\"\n    },\n    \"deliveryCoordinate\": {\n      \"yAxis\": 4,\n      \"xAxis\": \"A\"\n    },\n    \"time\": {{faker 'datatype.number' min=0 max=10000000}},\n    \"path\": [\n      {\n        \"yAxis\": 1,\n        \"xAxis\": \"A\"\n      },\n      {\n        \"yAxis\": 2,\n        \"xAxis\": \"A\"\n      },\n      {\n        \"yAxis\": 3,\n        \"xAxis\": \"A\"\n      },\n      {\n        \"yAxis\": 4,\n        \"xAxis\": \"A\"\n      }\n    ]\n  },\n  {\n    \"id\": {{faker 'datatype.number' min=0 max=250}},\n    \"initialCoordinate\": {\n      \"yAxis\": 1,\n      \"xAxis\": \"A\"\n    },\n    \"packageCoordinate\": {\n      \"yAxis\": 2,\n      \"xAxis\": \"A\"\n    },\n    \"deliveryCoordinate\": {\n      \"yAxis\": 4,\n      \"xAxis\": \"A\"\n    },\n    \"time\": {{faker 'datatype.number' min=0 max=10000000}},\n    \"path\": [\n      {\n        \"yAxis\": 1,\n        \"xAxis\": \"A\"\n      },\n      {\n        \"yAxis\": 2,\n        \"xAxis\": \"A\"\n      },\n      {\n        \"yAxis\": 3,\n        \"xAxis\": \"A\"\n      },\n      {\n        \"yAxis\": 4,\n        \"xAxis\": \"A\"\n      }\n    ]\n  },\n  {\n    \"id\": {{faker 'datatype.number' min=0 max=250}},\n    \"initialCoordinate\": {\n      \"yAxis\": 1,\n      \"xAxis\": \"A\"\n    },\n    \"packageCoordinate\": {\n      \"yAxis\": 2,\n      \"xAxis\": \"A\"\n    },\n    \"deliveryCoordinate\": {\n      \"yAxis\": 4,\n      \"xAxis\": \"A\"\n    },\n    \"time\": {{faker 'datatype.number' min=0 max=10000000}},\n    \"path\": [\n      {\n        \"yAxis\": 1,\n        \"xAxis\": \"A\"\n      },\n      {\n        \"yAxis\": 2,\n        \"xAxis\": \"A\"\n      },\n      {\n        \"yAxis\": 3,\n        \"xAxis\": \"A\"\n      },\n      {\n        \"yAxis\": 4,\n        \"xAxis\": \"A\"\n      }\n    ]\n  },\n  {\n    \"id\": {{faker 'datatype.number' min=0 max=250}},\n    \"initialCoordinate\": {\n      \"yAxis\": 1,\n      \"xAxis\": \"A\"\n    },\n    \"packageCoordinate\": {\n      \"yAxis\": 2,\n      \"xAxis\": \"A\"\n    },\n    \"deliveryCoordinate\": {\n      \"yAxis\": 4,\n      \"xAxis\": \"A\"\n    },\n    \"time\": {{faker 'datatype.number' min=0 max=10000000}},\n    \"path\": [\n      {\n        \"yAxis\": 1,\n        \"xAxis\": \"A\"\n      },\n      {\n        \"yAxis\": 2,\n        \"xAxis\": \"A\"\n      },\n      {\n        \"yAxis\": 3,\n        \"xAxis\": \"A\"\n      },\n      {\n        \"yAxis\": 4,\n        \"xAxis\": \"A\"\n      }\n    ]\n  },\n  {\n    \"id\": {{faker 'datatype.number' min=0 max=250}},\n    \"initialCoordinate\": {\n      \"yAxis\": 1,\n      \"xAxis\": \"A\"\n    },\n    \"packageCoordinate\": {\n      \"yAxis\": 2,\n      \"xAxis\": \"A\"\n    },\n    \"deliveryCoordinate\": {\n      \"yAxis\": 4,\n      \"xAxis\": \"A\"\n    },\n    \"time\": {{faker 'datatype.number' min=0 max=10000000}},\n    \"path\": [\n      {\n        \"yAxis\": 1,\n        \"xAxis\": \"A\"\n      },\n      {\n        \"yAxis\": 2,\n        \"xAxis\": \"A\"\n      },\n      {\n        \"yAxis\": 3,\n        \"xAxis\": \"A\"\n      },\n      {\n        \"yAxis\": 4,\n        \"xAxis\": \"A\"\n      }\n    ]\n  },\n  {\n    \"id\": {{faker 'datatype.number' min=0 max=250}},\n    \"initialCoordinate\": {\n      \"yAxis\": 1,\n      \"xAxis\": \"A\"\n    },\n    \"packageCoordinate\": {\n      \"yAxis\": 2,\n      \"xAxis\": \"A\"\n    },\n    \"deliveryCoordinate\": {\n      \"yAxis\": 4,\n      \"xAxis\": \"A\"\n    },\n    \"time\": {{faker 'datatype.number' min=0 max=10000000}},\n    \"path\": [\n      {\n        \"yAxis\": 1,\n        \"xAxis\": \"A\"\n      },\n      {\n        \"yAxis\": 2,\n        \"xAxis\": \"A\"\n      },\n      {\n        \"yAxis\": 3,\n        \"xAxis\": \"A\"\n      },\n      {\n        \"yAxis\": 4,\n        \"xAxis\": \"A\"\n      }\n    ]\n  },\n  {\n    \"id\": {{faker 'datatype.number' min=0 max=250}},\n    \"initialCoordinate\": {\n      \"yAxis\": 1,\n      \"xAxis\": \"A\"\n    },\n    \"packageCoordinate\": {\n      \"yAxis\": 2,\n      \"xAxis\": \"A\"\n    },\n    \"deliveryCoordinate\": {\n      \"yAxis\": 4,\n      \"xAxis\": \"A\"\n    },\n    \"time\": {{faker 'datatype.number' min=0 max=10000000}},\n    \"path\": [\n      {\n        \"yAxis\": 1,\n        \"xAxis\": \"A\"\n      },\n      {\n        \"yAxis\": 2,\n        \"xAxis\": \"A\"\n      },\n      {\n        \"yAxis\": 3,\n        \"xAxis\": \"A\"\n      },\n      {\n        \"yAxis\": 4,\n        \"xAxis\": \"A\"\n      }\n    ]\n  },\n  {\n    \"id\": {{faker 'datatype.number' min=0 max=250}},\n    \"initialCoordinate\": {\n      \"yAxis\": 1,\n      \"xAxis\": \"A\"\n    },\n    \"packageCoordinate\": {\n      \"yAxis\": 2,\n      \"xAxis\": \"A\"\n    },\n    \"deliveryCoordinate\": {\n      \"yAxis\": 4,\n      \"xAxis\": \"A\"\n    },\n    \"time\": {{faker 'datatype.number' min=0 max=10000000}},\n    \"path\": [\n      {\n        \"yAxis\": 1,\n        \"xAxis\": \"A\"\n      },\n      {\n        \"yAxis\": 2,\n        \"xAxis\": \"A\"\n      },\n      {\n        \"yAxis\": 3,\n        \"xAxis\": \"A\"\n      },\n      {\n        \"yAxis\": 4,\n        \"xAxis\": \"A\"\n      }\n    ]\n  },\n  {\n    \"id\": {{faker 'datatype.number' min=0 max=250}},\n    \"initialCoordinate\": {\n      \"yAxis\": 1,\n      \"xAxis\": \"A\"\n    },\n    \"packageCoordinate\": {\n      \"yAxis\": 2,\n      \"xAxis\": \"A\"\n    },\n    \"deliveryCoordinate\": {\n      \"yAxis\": 4,\n      \"xAxis\": \"A\"\n    },\n    \"time\": {{faker 'datatype.number' min=0 max=10000000}},\n    \"path\": [\n      {\n        \"yAxis\": 1,\n        \"xAxis\": \"A\"\n      },\n      {\n        \"yAxis\": 2,\n        \"xAxis\": \"A\"\n      },\n      {\n        \"yAxis\": 3,\n        \"xAxis\": \"A\"\n      },\n      {\n        \"yAxis\": 4,\n        \"xAxis\": \"A\"\n      }\n    ]\n  },\n  {\n    \"id\": {{faker 'datatype.number' min=0 max=250}},\n    \"initialCoordinate\": {\n      \"yAxis\": 1,\n      \"xAxis\": \"A\"\n    },\n    \"packageCoordinate\": {\n      \"yAxis\": 2,\n      \"xAxis\": \"A\"\n    },\n    \"deliveryCoordinate\": {\n      \"yAxis\": 4,\n      \"xAxis\": \"A\"\n    },\n    \"time\": {{faker 'datatype.number' min=0 max=10000000}},\n    \"path\": [\n      {\n        \"yAxis\": 1,\n        \"xAxis\": \"A\"\n      },\n      {\n        \"yAxis\": 2,\n        \"xAxis\": \"A\"\n      },\n      {\n        \"yAxis\": 3,\n        \"xAxis\": \"A\"\n      },\n      {\n        \"yAxis\": 4,\n        \"xAxis\": \"A\"\n      }\n    ]\n  },\n  {\n    \"id\": {{faker 'datatype.number' min=0 max=250}},\n    \"initialCoordinate\": {\n      \"yAxis\": 1,\n      \"xAxis\": \"A\"\n    },\n    \"packageCoordinate\": {\n      \"yAxis\": 2,\n      \"xAxis\": \"A\"\n    },\n    \"deliveryCoordinate\": {\n      \"yAxis\": 4,\n      \"xAxis\": \"A\"\n    },\n    \"time\": {{faker 'datatype.number' min=0 max=10000000}},\n    \"path\": [\n      {\n        \"yAxis\": 1,\n        \"xAxis\": \"A\"\n      },\n      {\n        \"yAxis\": 2,\n        \"xAxis\": \"A\"\n      },\n      {\n        \"yAxis\": 3,\n        \"xAxis\": \"A\"\n      },\n      {\n        \"yAxis\": 4,\n        \"xAxis\": \"A\"\n      }\n    ]\n  }\n]",
+            "latency": 1000,
+            "statusCode": 200,
+            "label": "Sucessful",
+            "headers": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Access-Control-Allow-Origin",
+                "value": "*"
+              }
+            ],
+            "bodyType": "INLINE",
+            "filePath": "",
+            "databucketID": "",
+            "sendFileAsBody": false,
+            "rules": [],
+            "rulesOperator": "OR",
+            "disableTemplating": false,
+            "fallbackTo404": false,
+            "default": true
+          }
+        ],
+        "enabled": true,
+        "responseMode": null
+      },
+      {
+        "uuid": "30eb6aef-2ab9-4da0-b075-b871530b83a8",
+        "type": "http",
+        "documentation": "Create New Route",
+        "method": "post",
+        "endpoint": "routes",
+        "responses": [
+          {
+            "uuid": "69dfc1f6-835a-4c80-b66e-675c92e4f7e0",
+            "body": "{\n  \"newRoute\": {\n    \"id\": {{faker 'datatype.number' min=0 max=250}},\n    \"initialCoordinate\": {\n      \"yAxis\": 1,\n      \"xAxis\": \"A\"\n    },\n    \"packageCoordinate\": {\n      \"yAxis\": 2,\n      \"xAxis\": \"A\"\n    },\n    \"deliveryCoordinate\": {\n      \"yAxis\": 4,\n      \"xAxis\": \"A\"\n    },\n        \"time\": {{faker 'datatype.number' min=0 max=10000000}},\n    \"path\": [\n      {\n        \"yAxis\": 1,\n        \"xAxis\": \"A\"\n      },\n      {\n        \"yAxis\": 2,\n        \"xAxis\": \"A\"\n      },\n      {\n        \"yAxis\": 3,\n        \"xAxis\": \"A\"\n      },\n      {\n        \"yAxis\": 4,\n        \"xAxis\": \"A\"\n      }\n    ]\n  }\n}",
+            "latency": 5000,
+            "statusCode": 201,
+            "label": "Sucessful",
+            "headers": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Access-Control-Allow-Origin",
+                "value": "*"
+              }
+            ],
+            "bodyType": "INLINE",
+            "filePath": "",
+            "databucketID": "",
+            "sendFileAsBody": false,
+            "rules": [],
+            "rulesOperator": "OR",
+            "disableTemplating": false,
+            "fallbackTo404": false,
+            "default": true
+          }
+        ],
+        "enabled": true,
+        "responseMode": null
+      }
     ],
-    "paths": {
-        "/routes": {
-            "get": {
-                "description": "List the 10 last routes calulated by the system",
-                "responses": {
-                    "200": {
-                        "description": "Sucessful",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "type": "array",
-                                    "items": {
-                                        "$ref": "#/components/schemas/route"
-                                    },
-                                    "uniqueItems": true,
-                                    "minItems": 10,
-                                    "maxItems": 10
-                                }
-                            }
-                        },
-                        "headers": {}
-                    }
-                }
-            },
-            "post": {
-                "description": "Create New Route",
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "type": "object",
-                                "properties": {
-                                    "initialCoordinate": {
-                                        "$ref": "#/components/schemas/coordinate"
-                                    },
-                                    "packageCoordinate": {
-                                        "$ref": "#/components/schemas/coordinate"
-                                    },
-                                    "deliveryCoordinate": {
-                                        "$ref": "#/components/schemas/coordinate"
-                                    }
-                                }
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "201": {
-                        "description": "Sucessful",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "type": "object",
-                                    "properties": {
-                                        "newRoute": {
-                                            "$ref": "#/components/schemas/route"
-                                        }
-                                    }
-                                }
-                            }
-                        },
-                        "headers": {}
-                    }
-                }
-            }
-        }
+    "rootChildren": [
+      {
+        "type": "route",
+        "uuid": "b7d7d954-41e6-48fb-9ec3-b47b8741d28c"
+      },
+      {
+        "type": "route",
+        "uuid": "30eb6aef-2ab9-4da0-b075-b871530b83a8"
+      }
+    ],
+    "proxyMode": false,
+    "proxyHost": "",
+    "proxyRemovePrefix": false,
+    "tlsOptions": {
+      "enabled": false,
+      "type": "CERT",
+      "pfxPath": "",
+      "certPath": "",
+      "keyPath": "",
+      "caPath": "",
+      "passphrase": ""
     },
-    "components": {
-        "schemas": {
-            "coordinate": {
-                "type": "object",
-                "properties": {
-                    "xAxis": {
-                        "type": "integer",
-                        "format": "int32",
-                        "example": 5
-                    },
-                    "yAxis": {
-                        "type": "string",
-                        "minLength": 1,
-                        "maxLength": 1,
-                        "example": "A"
-                    }
-                }
-            },
-            "route": {
-                "type": "object",
-                "properties": {
-                    "id": {
-                        "type": "integer",
-                        "format": "int64",
-                        "example": 10
-                    },
-                    "initialCoordinate": {
-                        "$ref": "#/components/schemas/coordinate"
-                    },
-                    "packageCoordinate": {
-                        "$ref": "#/components/schemas/coordinate"
-                    },
-                    "deliveryCoordinate": {
-                        "$ref": "#/components/schemas/coordinate"
-                    },
-                    "time": {
-                        "type": "integer",
-                        "format": "double",
-                        "example": 1342.212
-                    },
-                    "path": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/coordinate"
-                        }
-                    }
-                }
-            }
-        },
-        "requestBodies": {
-            "newRoute": {
-                "description": "Create new Route",
-                "content": {
-                    "application/json": {
-                        "schema": {
-                            "type": "object",
-                            "properties": {
-                                "initialCoordinate": {
-                                    "$ref": "#/components/schemas/coordinate"
-                                },
-                                "packageCoordinate": {
-                                    "$ref": "#/components/schemas/coordinate"
-                                },
-                                "deliveryCoordinate": {
-                                    "$ref": "#/components/schemas/coordinate"
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+    "cors": true,
+    "headers": [],
+    "proxyReqHeaders": [
+      {
+        "key": "",
+        "value": ""
+      }
+    ],
+    "proxyResHeaders": [
+      {
+        "key": "",
+        "value": ""
+      }
+    ],
+    "data": []
+  }

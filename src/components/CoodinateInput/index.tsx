@@ -1,17 +1,24 @@
 import FormControl from "@mui/material/FormControl";
-import Input, { InputProps } from "@mui/material/Input";
+import FormHelperText from "@mui/material/FormHelperText";
 import InputLabel from "@mui/material/InputLabel";
+import Input, { OutlinedInputProps } from "@mui/material/OutlinedInput";
 import React from "react";
 
-export type CoordinateInputProps = InputProps & {
+export type CoordinateInputProps = OutlinedInputProps & {
   label: string;
+  errorMessage: string;
 };
 
-const CoordinateInput: React.FC<CoordinateInputProps> = (props) => {
+const CoordinateInput: React.FC<CoordinateInputProps> = ({
+  errorMessage,
+  label,
+  ...props
+}) => {
   return (
-    <FormControl variant="standard">
-      <InputLabel htmlFor="component-simple">{props.label}</InputLabel>
-      <Input {...props} />
+    <FormControl error={!!errorMessage}>
+      <InputLabel>{label}</InputLabel>
+      <Input {...props} label={label} />
+      <FormHelperText>{errorMessage}</FormHelperText>
     </FormControl>
   );
 };

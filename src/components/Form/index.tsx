@@ -1,6 +1,8 @@
+import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
+import CircularProgress from "@mui/material/CircularProgress";
 import Typography from "@mui/material/Typography";
-import { ChangeEvent, FormEvent } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 import {
   useNewRouteForm,
   type FormParameters,
@@ -11,6 +13,7 @@ import CoordinateInput from "../CoodinateInput";
 import { FormCard, InputForm } from "./styles";
 
 const Form = () => {
+  const [isBusy, setIsBusy] = useState(false);
   const [formState, dispatch] = useNewRouteForm();
   const calculateNewRoute = useRoutesStore((state) => state.calculateNewRoute);
 
@@ -35,8 +38,9 @@ const Form = () => {
         yAxis: Number(values.deliveryCoordinate[1]),
       },
     };
-
-    calculateNewRoute(body).then(() => dispatch({ type: "RESET_VALUE" }));
+    setIsBusy(true);
+    await calculateNewRoute(body).then(() => dispatch({ type: "RESET_VALUE" }));
+    setIsBusy(false);
   };
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -62,13 +66,13 @@ const Form = () => {
         </Typography>
         <InputForm onSubmit={handleSubmit}>
           <CoordinateInput
+            name="initialCoordinate"
             label="Initial Coordinate"
             type="text"
-            onChange={handleChange}
-            id="initial"
             value={formState.values.initialCoordinate}
             errorMessage={formState.errors.initialCoordinate}
-            name="initialCoordinate"
+            disabled={isBusy}
+            onChange={handleChange}
           />
           <CoordinateInput
             name="packageCoordinate"
@@ -76,6 +80,7 @@ const Form = () => {
             type="text"
             value={formState.values.packageCoordinate}
             errorMessage={formState.errors.packageCoordinate}
+            disabled={isBusy}
             onChange={handleChange}
           />
           <CoordinateInput
@@ -84,11 +89,26 @@ const Form = () => {
             type="text"
             value={formState.values.deliveryCoordinate}
             errorMessage={formState.errors.deliveryCoordinate}
+            disabled={isBusy}
             onChange={handleChange}
           />
-          <Button variant="contained" type="submit">
-            Calculate fastest route!
-          </Button>
+          <Box sx={{ m: 1, position: "relative" }}>
+            <Button variant="contained" type="submit" disabled={isBusy}>
+              Calculate fastest route!
+            </Button>
+            {isBusy && (
+              <CircularProgress
+                size={24}
+                sx={{
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  marginTop: "-12px",
+                  marginLeft: "-12px",
+                }}
+              />
+            )}
+          </Box>
         </InputForm>
       </FormCard>
     </>

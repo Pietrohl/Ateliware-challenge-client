@@ -19,8 +19,6 @@ export function createServiceRequest(
     });
     clearTimeout(timeoutId);
 
-    console.log("Response", response);
-
     return response.ok ? response.json() : Promise.reject(response);
   };
 }

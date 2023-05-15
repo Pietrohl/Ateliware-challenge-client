@@ -6,7 +6,6 @@ import { Container } from "./styles";
 
 const RoutesList: React.FC = () => {
   const routes = useRoutesStore((state) => state.routes);
-
   return (
     <Container>
       {routes.map((route, i) => (

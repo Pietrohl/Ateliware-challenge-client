@@ -15,7 +15,7 @@ const RouteSummary: React.FC<Route> = ({
       From <strong>{coord(initialCoordinate)}</strong>, picking-up to{" "}
       <strong>{coord(packageCoordinate)}</strong> and delivery to{" "}
       <strong>{coord(deliveryCoordinate)}</strong> in{" "}
-      <strong>{Math.floor(time / 1000).toFixed(0)} seconds.</strong>
+      <strong>{Math.floor(time).toFixed(0)} seconds.</strong>
     </div>
   );
 };

@@ -9,9 +9,8 @@ const routeServiceRequest = createServiceRequest();
 export const newRouteRequest = (body: NewRouteDTO) => {
   return routeServiceRequest<NewRouteResponse>("/routes", {
     method: "POST",
-    body: JSON.stringify({
-      body,
-    }),
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body),
   });
 };
 

@@ -8,16 +8,11 @@ import { Route } from "../../models/route/route.model";
 import RouteDetails from "../RouteDetails";
 import RouteSummary from "../RouteSummary";
 
-
-
 const RouteListItem: React.FC<Route> = (route) => {
   return (
-    <Slide direction="left" in={!!route.id}  unmountOnExit>
+    <Slide direction="left" in={!!route.id} unmountOnExit>
       <Accordion elevation={1}>
-        <AccordionSummary
-          id={route.id.toString()}
-          expandIcon={<ExpandMoreIcon />}
-        >
+        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
           {RouteSummary(route)}
         </AccordionSummary>
         <AccordionDetails>{RouteDetails(route)}</AccordionDetails>

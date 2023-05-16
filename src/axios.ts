@@ -1,6 +1,8 @@
 // Creating a service request method similar to axios.create
 // choose this approach for smaller footprint
-const defaultBaseURL = new URL(import.meta.env.VITE_API_TARGET);
+const defaultBaseURL = new URL(
+  import.meta.env.VITE_API_TARGET ?? window.location.href
+);
 const defaultRequestInit: Omit<RequestInit, "signal"> = {};
 
 export function createServiceRequest(

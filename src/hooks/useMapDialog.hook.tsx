@@ -41,7 +41,7 @@ const MapDialogContext = createContext<
   [DialogState, React.Dispatch<DialogActions>] | null
 >(null);
 
-const MapDialogProvider = ({ children }) => {
+const MapDialogProvider = ({ children }: {children: JSX.Element}) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
@@ -72,4 +72,6 @@ const useMapDialog = () => {
   return { displayRoute, closeDialog, state };
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export { MapDialogProvider, useMapDialog };
+

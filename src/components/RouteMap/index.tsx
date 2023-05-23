@@ -15,7 +15,7 @@ import {
 const RouteMap: React.FC<Route> = (route) => {
   const index = "ABCDEFGH";
 
-  if (!route.initialCoordinate) return "";
+  if (!route.initialCoordinate) return <></>;
 
   const { path, deliveryCoordinate, initialCoordinate, packageCoordinate } =
     route;
@@ -68,3 +68,4 @@ const RouteMap: React.FC<Route> = (route) => {
 };
 
 export { RouteMap };
+

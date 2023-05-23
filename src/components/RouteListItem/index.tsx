@@ -1,12 +1,8 @@
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import Accordion from "@mui/material/Accordion";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import Slide from "@mui/material/Slide";
-import React from "react";
+import { Accordion, AccordionDetails, AccordionSummary, Slide } from "@mui/material";
 import { Route } from "../../models/route/route.model";
-import RouteDetails from "../RouteDetails";
-import RouteSummary from "../RouteSummary";
+import RouteDetails from "../RouteDetails/index";
+import RouteSummary from "../RouteSummary/index";
 
 const RouteListItem: React.FC<Route> = (route) => {
   return (

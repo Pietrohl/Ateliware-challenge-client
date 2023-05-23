@@ -15,5 +15,5 @@ export const InputForm = styled.form`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: ${20}px;
+  gap: ${10}px;
 `;

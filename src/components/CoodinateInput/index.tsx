@@ -15,10 +15,10 @@ const CoordinateInput: React.FC<CoordinateInputProps> = ({
   ...props
 }) => {
   return (
-    <FormControl error={!!errorMessage}>
+    <FormControl error={!!errorMessage} >
       <InputLabel>{label}</InputLabel>
       <Input {...props} label={label} />
-      <FormHelperText>{errorMessage}</FormHelperText>
+      <FormHelperText  >{errorMessage|| " "}</FormHelperText>
     </FormControl>
   );
 };

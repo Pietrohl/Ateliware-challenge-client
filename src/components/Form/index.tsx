@@ -5,8 +5,8 @@ import Typography from "@mui/material/Typography";
 import { ChangeEvent, FormEvent, useState } from "react";
 import {
   useNewRouteForm,
-  type FormParameters,
-} from "../../hooks/useNewRouteForm";
+  type FormParameters
+} from "../../hooks/useNewRouteForm.hook";
 import { NewRouteDTO } from "../../models/route/route.model";
 import { useRoutesStore } from "../../models/route/route.store";
 import CoordinateInput from "../CoodinateInput";

@@ -6,7 +6,7 @@ import RouteSummary from "../RouteSummary/index";
 
 const RouteListItem: React.FC<Route> = (route) => {
   return (
-    <Slide direction="left" in={!!route.id} unmountOnExit>
+    <Slide direction="left" in unmountOnExit>
       <Accordion elevation={1}>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
           {RouteSummary(route)}

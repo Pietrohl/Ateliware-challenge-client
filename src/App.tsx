@@ -10,8 +10,8 @@ function App() {
     <>
       <CssBaseline />
       <MapDialogProvider>
-        <RouteMapDialog />
         <Page>
+          <RouteMapDialog />
           <Form />
           <RoutesList />
         </Page>

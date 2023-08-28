@@ -1,4 +1,4 @@
 import { Coordinate } from "../models/coordinate/coordinate.model";
 
-export const coordinateTamplate = ({ xAxis, yAxis }: Coordinate): string =>
+export const coordinateTamplate = ({ x: xAxis, y: yAxis }: Coordinate): string =>
   `${xAxis}${yAxis}`;

@@ -21,14 +21,14 @@ const RouteMap: React.FC<Route> = (route) => {
     route;
 
   const packageCoordIndex =
-    index.indexOf(packageCoordinate.xAxis) + (packageCoordinate.yAxis - 1) * 8;
+    index.indexOf(packageCoordinate.x) + (packageCoordinate.y - 1) * 8;
 
   const deliveryCoodIndex =
-    index.indexOf(deliveryCoordinate.xAxis) +
-    (deliveryCoordinate.yAxis - 1) * 8;
+    index.indexOf(deliveryCoordinate.x) +
+    (deliveryCoordinate.y - 1) * 8;
 
   const droneCoordIndex =
-    index.indexOf(initialCoordinate.xAxis) + (initialCoordinate.yAxis - 1) * 8;
+    index.indexOf(initialCoordinate.x) + (initialCoordinate.y - 1) * 8;
 
   const square = (number: number) => {
     return (
@@ -43,7 +43,7 @@ const RouteMap: React.FC<Route> = (route) => {
     );
   };
 
-  const divPositions = path.map(({ xAxis, yAxis }) => ({
+  const divPositions = path.map(({ x: xAxis, y: yAxis }) => ({
     x: index.indexOf(xAxis) * 50 * (7 / 8) + 25,
     y: (yAxis - 1) * 50 * (7 / 8) + 25,
   }));

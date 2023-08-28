@@ -26,16 +26,16 @@ const Form = () => {
 
     const body: NewRouteDTO = {
       initialCoordinate: {
-        xAxis: values.initialCoordinate[0],
-        yAxis: Number(values.initialCoordinate[1]),
+        x: values.initialCoordinate[0],
+        y: Number(values.initialCoordinate[1]),
       },
       packageCoordinate: {
-        xAxis: values.packageCoordinate[0],
-        yAxis: Number(values.packageCoordinate[1]),
+        x: values.packageCoordinate[0],
+        y: Number(values.packageCoordinate[1]),
       },
       deliveryCoordinate: {
-        xAxis: values.deliveryCoordinate[0],
-        yAxis: Number(values.deliveryCoordinate[1]),
+        x: values.deliveryCoordinate[0],
+        y: Number(values.deliveryCoordinate[1]),
       },
     };
     setIsBusy(true);
